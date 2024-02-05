@@ -12,7 +12,7 @@ const NoteCard = ({ key, avater, username, content, createdAt, favoriteCount, au
     const {data} = useQuery(IS_LOGGED_IN)
   return (
     <div key={key} className='p-5 bg-primary lg:min-w-[450px] lg:min-h-[250px] flex flex-col justify-center rounded-lg
-    sm:min-w-[600px] sm:min-h-[250px]  max-sm:min-w-[350px] max-sm:min-h-[250px]'>
+    sm:min-w-[600px] sm:min-h-[250px]  max-sm:min-w-[300px] max-sm:min-h-[250px]'>
         <div className='flex-1 flex flex-col justify-center items-center gap-3'>
             <ReactMarkdown className='w-full break-words text-center font-bold font-Garamond lg:text-3xl sm:text-2xl max-sm:text-xl'>{ content }</ReactMarkdown>
             <p className='font-Garamond italic opacity-60 font-bold'>{day}/{month}/{year}</p>
