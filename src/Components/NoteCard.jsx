@@ -14,7 +14,7 @@ const NoteCard = ({ key, avater, username, content, createdAt, favoriteCount, au
     <div key={key} className='p-5 bg-primary lg:min-w-[450px] lg:min-h-[250px] flex flex-col justify-center rounded-lg
     sm:min-w-[600px] sm:min-h-[250px]  max-sm:min-w-[350px] max-sm:min-h-[250px]'>
         <div className='flex-1 flex flex-col justify-center items-center gap-3'>
-            <ReactMarkdown className='font-bold font-Garamond text-3xl'>{ content }</ReactMarkdown>
+            <ReactMarkdown className='w-full break-words text-center font-bold font-Garamond lg:text-3xl sm:text-2xl max-sm:text-xl'>{ content }</ReactMarkdown>
             <p className='font-Garamond italic opacity-60 font-bold'>{day}/{month}/{year}</p>
         </div>
         <div className='flex-1 flex justify-evenly items-center'>
@@ -23,7 +23,7 @@ const NoteCard = ({ key, avater, username, content, createdAt, favoriteCount, au
                 src={avater} 
                 alt="user avatar"
                 className='object-contain rounded-full lg:w-[60px] sm:[40px] max-sm:w-[40px]' />
-                <p className='font-montserrat italic'>{username}</p>
+                <p className='font-montserrat italic max-sm:w-[100px] break-words'>{username}</p>
             </div>
             <div className='ml-5'>
             {

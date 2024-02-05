@@ -18,7 +18,7 @@ const NoteUser = ({autherId, noteId, hideDetailsBtn, favoriteCount}) => {
 
   return (
     <div className='flex lg:flex-row sm:flex-col max-sm:flex-col
-    sm:justify-center sm:items-center
+    sm:justify-center sm:items-start
     max-sm:justify-center max-sm:items-start 
     lg:justify-center lg:items-center gap-2'>
         <div className="flex justify-center items-center gap-2">
@@ -26,16 +26,18 @@ const NoteUser = ({autherId, noteId, hideDetailsBtn, favoriteCount}) => {
             {
                 !hideDetailsBtn &&
                     <Link key={noteId} to={`/note/${noteId}`}
-                    className='py-1 px-5 font-Garamond border-2 border-secend-color
-                    flex items-center justify-center hover:bg-secend-color text-black '
+                    className='py-1 lg:px-5 font-Garamond border-2 border-secend-color
+                    flex items-center justify-center hover:bg-secend-color text-black 
+                    sm:px-4 max-sm:px-3'
                     > Details </Link>
             }
         </div>
         {
             data.me.id === autherId &&
             <div className="flex justify-center items-center gap-2">
-                <Link className='py-1 px-5 font-Garamond border-2 border-secend-color
-                flex items-center justify-center hover:bg-secend-color text-black '
+                <Link className='py-1 lg:px-5 font-Garamond border-2 border-secend-color
+                flex items-center justify-center hover:bg-secend-color text-black
+                sm:px-4 max-sm:px-3'
                 to={`/edit/${noteId}`}>Edit</Link>
                 <DeleteNote noteId={noteId}/>
             </div>

@@ -33,7 +33,7 @@ const FavoriteNote = ({ favoriteCount, data, noteId }) => {
     <>
         {
             favorited ?
-                <div className='py-1 px-5 flex-1 flex justify-end items-center gap-4 border-2 border-secend-color'>
+                <div className='py-1 lg:px-5 sm:px-4 max-sm:px-3 flex-1 flex justify-end items-center gap-4 border-2 border-secend-color'>
                     <MdOutlineFavorite onClick={()=>{
                         setCount(count - 1)
                         setFavorited(false)
@@ -43,7 +43,7 @@ const FavoriteNote = ({ favoriteCount, data, noteId }) => {
                     <p className='font-Garamond font-bold text-xl'>{count}</p>
                 </div>
             :
-                <div className='py-1 px-5 flex-1 flex justify-end items-center gap-4 border-2 border-secend-color'>
+                <div className='py-1 lg:px-5 flex-1 flex justify-end sm:px-4 max-sm:px-3 items-center gap-4 border-2 border-secend-color'>
                     <MdOutlineFavorite onClick={()=>{
                         setCount(count + 1)
                         setFavorited(true)
