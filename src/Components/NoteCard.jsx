@@ -22,8 +22,7 @@ const NoteCard = ({ key, avater, username, content, createdAt, favoriteCount, au
                 <img 
                 src={avater} 
                 alt="user avatar"
-                width={60}
-                className='object-contain rounded-full' />
+                className='object-contain rounded-full lg:w-[60px] sm:[40px] max-sm:w-[40px]' />
                 <p className='font-montserrat italic'>{username}</p>
             </div>
             <div className='ml-5'>

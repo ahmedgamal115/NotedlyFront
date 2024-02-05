@@ -17,15 +17,20 @@ const NoteUser = ({autherId, noteId, hideDetailsBtn, favoriteCount}) => {
     if(error) return <p>Error! {console.error(error)}</p>
 
   return (
-    <div className='flex justify-center items-center gap-2'>
-        <FavoriteNote favoriteCount={favoriteCount} data={data} noteId={noteId}/>
-        {
-            !hideDetailsBtn &&
-                <Link key={noteId} to={`/note/${noteId}`}
-                className='py-1 px-5 font-Garamond border-2 border-secend-color
-                flex items-center justify-center hover:bg-secend-color text-black '
-                > Details </Link>
-        }
+    <div className='flex lg:flex-row sm:flex-col max-sm:flex-col
+    sm:justify-center sm:items-center
+    max-sm:justify-center max-sm:items-start 
+    lg:justify-center lg:items-center gap-2'>
+        <div className="flex justify-center items-center gap-2">
+            <FavoriteNote favoriteCount={favoriteCount} data={data} noteId={noteId}/>
+            {
+                !hideDetailsBtn &&
+                    <Link key={noteId} to={`/note/${noteId}`}
+                    className='py-1 px-5 font-Garamond border-2 border-secend-color
+                    flex items-center justify-center hover:bg-secend-color text-black '
+                    > Details </Link>
+            }
+        </div>
         {
             data.me.id === autherId &&
             <div className="flex justify-center items-center gap-2">
