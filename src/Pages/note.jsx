@@ -17,7 +17,7 @@ const Note = (props) => {
 
   return (
     <div className='w-full flex items-center justify-center'>
-        <div className='lg:w-[60%] sm:w-full max-sm:w-full'>
+        <div className='lg:w-[60%] sm:w-full max-sm:w-[80%]'>
             <NoteCard key={data.note.id} avater={data.note.author.avater} content={data.note.content} 
             createdAt={data.note.createdAt} favoriteCount={data.note.favoriteCount} username={data.note.author.username}
             noteId={id} autherId={data.note.author.id} hideDetailsBtn={true}/>
